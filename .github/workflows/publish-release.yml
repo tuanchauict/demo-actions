@@ -12,11 +12,11 @@ jobs:
           ref: ${{ secrets.ALPHA_RELEASE_BRANCH }}
       - name: Publish release
         run: |
-        ls
-        pwd
-        # git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" "../src"
-        # mv -f README.md ../src
-        # cd ../src
-        # git add README.md
-        # git commit -m "Update readme"
-        # git push
+          ls
+          pwd
+          # git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" "../src"
+          # mv -f README.md ../src
+          # cd ../src
+          # git add README.md
+          # git commit -m "Update readme"
+          # git push
