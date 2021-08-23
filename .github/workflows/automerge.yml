@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: release/alpha/1.0.0
+          ref: ${{ secrets.ALPHA_RELEASE_BRANCH }}
       - name: Environment detector
         id: vars
         shell: bash
