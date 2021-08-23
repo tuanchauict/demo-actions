@@ -1,0 +1,21 @@
+name: alpha release auto merge
+on:
+  push:
+    branches:
+      - main
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ secrets.ALPHA_RELEASE_BRANCH }}
+      - name: Publish release
+        run: |
+        ls
+        git clone https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git ../src
+        mv -f README.md ../src
+        cd ../src
+        git add README.md
+        git commit -m "Update readme"
+        git push
