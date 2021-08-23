@@ -17,8 +17,10 @@ jobs:
           pwd
           mv -f README.md ../src
           cd ../src
+          pwd
           git add README.md
+          git status
           git commit -m "Update readme"
-          git config --global user.email "tuanchau@example.com"
-          git config --global user.name "Tuan Chau"
+          git config user.email "tuanchau@example.com"
+          git config user.name "Tuan Chau"
           git push
