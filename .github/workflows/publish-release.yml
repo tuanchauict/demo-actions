@@ -1,0 +1,18 @@
+name: Publish release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish release
+        run: |
+          cat README.md
+          dir=$PWD
+          echo "> $dir"
+          git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" "../src"
+          cd ../src
+          sh release.sh "$dir"
