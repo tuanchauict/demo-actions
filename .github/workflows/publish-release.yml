@@ -13,7 +13,7 @@ jobs:
       - name: Publish release
         run: |
         ls
-        git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" ../src
+        git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" "../src"
         mv -f README.md ../src
         cd ../src
         git add README.md
