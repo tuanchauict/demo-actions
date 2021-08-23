@@ -14,13 +14,5 @@ jobs:
           dir=$PWD
           echo "> $dir"
           git clone "https://tuanchauict:${{secrets.AUTH}}@github.com/monosketch/demo-alpha-release.git" "../src"
-          pwd
-          mv -f README.md ../src
           cd ../src
-          git config user.email "tuanchau@example.com"
-          git config user.name "Tuan Chau"
-          pwd
-          git add README.md
-          git status
-          git commit -m "Update readme"
-          git push
+          sh release.sh "$dir"
